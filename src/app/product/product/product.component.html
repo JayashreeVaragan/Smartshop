@@ -1,0 +1,8 @@
+<div class="card-deck my-5">
+  <div class="row mx-auto">
+    <div class="col-lg-3 col-md-6 mr-auto" *ngFor="let lists of list">
+      <button class="btn btn-primary" id="button-color" (click)="products(lists)">{{lists}}</button>
+    </div>
+  </div>
+</div>
+<app-productlist [type]="productItems"></app-productlist>

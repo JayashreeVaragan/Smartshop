@@ -1,0 +1,68 @@
+<div class="container-fluid mb-5">
+    <div class="card-deck">
+        <div class="col-12 col-md-6 col-lg-3" *ngFor="let product of type">
+            <div class="card">
+                <img src="{{product.image}}" class="card-img-top" alt="missing" />
+                <div class="card-body">
+                    <div class="row">
+
+                        <label for="name">
+                            <h5 id="name">{{product.productName}}({{product.productBrand}})</h5>
+                        </label> <span class="ml-auto" id="price"><label
+                                for="price">&#8377;{{product.rate}}</label></span>
+                    </div>
+
+                    <div class="row">
+                        <label for="Product_Code">
+                            <h6>PRODUCT CODE: {{product.productCode}}</h6>
+                        </label>
+                    </div>
+
+                    <div class="row">
+                        <span class="badge badge-success mb-3 mr-1" id="active"><label for="active"
+                                *ngIf="product.stock !='0'"> active</label></span>
+                        <span class="badge badge-danger mb-3 mr-1" id="active"><label for="active"
+                                *ngIf="product.stock =='0'"> inactive</label></span>
+                        <span id="category"><label for="category">
+                                <h6>Category: {{product.productType}}</h6>
+                            </label></span>
+                    </div>
+
+
+                    <div class="row">
+
+                        <label for="name">Aisle: {{product.aisle}}</label></div>
+                    <div class="row">
+                        <label for="price">Shelf: {{product.shelf}}</label>
+                    </div>
+                    <div class="row">
+                        <i class="material-icons">access_time</i><span id="dateofLaunch"><label
+                                for="dateofLaunch">Launch </label>
+                            <span class="ml-auto"> {{product.expiryDate | date}}</span></span>
+                    </div>
+                    <div class="row mx-auto">
+                        <div *ngIf="isAdmin">
+                            <a class="btn btn-primary ml-auto" id="button-color"
+                                [routerLink]="['/product-edit',product.productCode]">
+                                <i class="material-icons">edit</i> Edit
+                            </a>
+                        </div>
+
+                        <div id="delete" *ngIf="isAdmin">
+                            <a class="btn btn-primary mx-auto text-white" id="button-color"
+                                (click)="delete(product.productCode)">
+                                <i class="material-icons text-white">delete_forever</i> Delete
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div><br>
+<div class="container" *ngIf="added">
+    <div class="alert alert-success">Added to cart
+        successfully</div>
+</div>

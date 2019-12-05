@@ -1,0 +1,106 @@
+/* include stylesheet for truYum */
+.icon {
+	font-size: 30px;
+	line-height: 1;
+	vertical-align: middle;
+}
+.add_colors{
+	color: #808080;
+}
+
+.gross_color{
+	color:#800000;
+	font-size:15px;
+}
+.top_header {
+	background-color: #01A9DB;
+}
+
+.bottom {
+	background-color: #01A9DB;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+}
+
+.teaser{
+	vertical-align: super;
+}
+
+.remove{
+	text-align: right;
+}
+.edit_colors{
+	background-color:#01A9DB;
+	color:white;
+
+}
+.signup-btn {
+	background-color:#01A9DB;
+	color: white;
+}
+.person_icon {
+	line-height: 1;
+	vertical-align: middle;
+	size:5px;
+}
+#truyum-nav-logo ,#truyum-heading{
+    width:20px;
+    color:white;
+}
+i {
+    vertical-align:middle;
+}
+
+#truyum-heading {
+    font-weight:bold;
+}
+
+#truyum-navbar-menus {
+    color:white;
+    font-weight:bold;
+}
+
+#truyum-allpages-footer {
+    font-size: 16px;
+    font-weight:bold;
+    color: white;
+}
+
+#price {
+    font-family:Arial;
+    color:red;
+}
+
+.row {
+
+    margin-top:2px;
+}
+
+.card {
+    margin-bottom:50px;
+}
+
+.jumbotron {
+
+  background-image: url("https://images.unsplash.com/photo-1493236272120-200db0da1927?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+  min-height: 240px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.small{
+    color:red;
+}
+#button-color{
+    background-color:#01A9DB;
+	color: white;
+}
+#delete{
+    margin-left:45px;
+}
+#left{
+    margin-right:85px;
+}

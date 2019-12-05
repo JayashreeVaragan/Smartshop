@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-xl-11 mt-5 ml-5 mr-5 mx-auto">
+        <h2 class="text-white">Purchase History</h2>
+        <div class="card mt-5">
+                <input type="date"  [(ngModel)]="dateKey" (input)="searchDate()" > 
+            <table class="table">
+                     
+                <tr>
+
+                    <th class="ml-5">Bill Id</th>
+                    <th class="ml-5">Bill Date</th>
+                    <th class="ml-5">Product Code</th>
+                    <th class="ml-5">Product Name</th>
+                    <th class="ml-5">Quantity</th>
+                    <th class="ml-5">Rate</th>
+                </tr>
+
+                <tr *ngFor="let admin of dateList">
+                    <td class="ml-5">{{admin.billId}}</td>
+                    <td class="ml-5">{{admin.billDate}}</td>
+                    <td class="ml-5">{{admin.product.productCode}}</td>
+                    <td class="ml-5">{{admin.product.productName}}</td>
+                    <td class="ml-5">{{admin.quantity}}</td>
+                    <td class="ml-5">{{admin.product.rate}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
